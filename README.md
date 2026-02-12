@@ -243,88 +243,10 @@ def submit(self):
 
 ---
 
-## 📚 Module Documentation
-
-### `data_loader.py`
-- **Purpose**: Load, clean, merge datasets
-- **Key Functions**:
-  - `load_data()`: Load raw datasets
-  - `preprocess_and_merge()`: Clean and merge
-  - `prepare_train_test_split()`: Split data
-
-### `gan_module.py`
-- **Purpose**: Generate synthetic patients
-- **Key Functions**:
-  - `train()`: Train CTGAN
-  - `generate_synthetic_patients()`: Generate samples
-  - `augment_minority_classes()`: Balance dataset
-
-### `causal_module.py`
-- **Purpose**: Estimate causal effects
-- **Key Functions**:
-  - `estimate_propensity_scores()`: P(treatment | features)
-  - `estimate_individual_treatment_effects()`: ITE per drug
-  - `recommend_drug_causal()`: Causal recommendation
-
-### `prototype_module.py`
-- **Purpose**: Cluster patients into archetypes
-- **Key Functions**:
-  - `fit()`: Learn prototypes
-  - `predict_prototype()`: Assign to cluster
-  - `recommend_drug_prototype()`: Prototype-based recommendation
-
-### `ensemble_model.py`
-- **Purpose**: Main model orchestration
-- **Key Functions**:
-  - `train()`: Train all sub-models
-  - `predict_ensemble()`: Combined prediction
-  - `evaluate()`: Comprehensive metrics
-
-### `ui_integration.py`
-- **Purpose**: Connect ML to UI
-- **Key Functions**:
-  - `process_ui_input()`: Convert UI data to features
-  - `predict()`: Make recommendation
-  - `_generate_explanation()`: Explain recommendation
-
----
-
-## 🎓 For Your Paper
-
-### Novel Contributions
-
-1. **Causal Prototype Network**: First application of combined causal inference + prototype learning for drug recommendation
-2. **Adversarial Augmentation**: GAN-based synthetic patient generation for rare comorbidity combinations
-3. **Digital Twin Framework**: Personalized treatment simulation for hypertension
-
-### Methodology Section (Template)
-
-```
-We propose a Causal Prototype Network with Adversarial Patient Augmentation
-for personalized antihypertensive drug recommendation. The system consists of
-three main components:
-
-1. Data Augmentation: We employ CTGAN to generate synthetic patients,
-   particularly for minority drug classes and rare comorbidity combinations.
-
-2. Causal Inference: We estimate individual treatment effects (ITE) using
-   propensity score weighting and outcome modeling, predicting the expected
-   blood pressure reduction for each drug-patient combination.
-
-3. Prototype Learning: We apply K-Prototypes clustering to identify 8 patient
-   archetypes and match new patients to similar cases.
-
-4. Ensemble Model: We combine predictions from XGBoost, causal inference,
-   and prototype matching using weighted averaging (40%, 25%, 35% respectively).
-
-The system achieves 92% top-3 accuracy with 91% precision and recall on a
-test set of 1000 patients, outperforming baseline methods by 12%.
-```
 
 ### Comparison with Baselines
 
 ```python
-# Add this to your paper
 Baseline Methods:
 - Random Forest: 72% top-3 accuracy
 - XGBoost alone: 85% top-3 accuracy
@@ -397,16 +319,11 @@ Educational use only. Not for commercial deployment without proper medical valid
 
 ## 👥 Contributors
 
-[Your Name] - Student Researcher
+Tanisha - Student Researcher
 Project: Digital Twin for Personalized Hypertension Treatment
 
 ---
 
-## 📧 Contact
-
-For questions or issues, please contact: [your email]
-
----
 
 ## 🎉 Next Steps
 
